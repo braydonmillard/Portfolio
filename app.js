@@ -24,7 +24,12 @@ function PageTransitions(){
             e.target.classList.add('active')
 
             //hide other sections
-            sections
+            sections.forEach((section)=>{
+                section.classList.remove('active')
+            })
+
+            const element = document.getElementById(id);
+            element.classList.add('active');
         }
     })
 }
